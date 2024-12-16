@@ -60,6 +60,7 @@ The training data (train.csv) contains 785 columns, of which 1 column is a label
 The testing data (test.csv) contains 784 columns, including only feature columns (pixel0 to pixel783) and no label column.
 
 ## 4. Model Details
+![sample images](https://github.com/user-attachments/assets/1f4b02b8-fbd1-44c4-ada4-d741c7258520)
 ### Columns used as inputs in the final model:
 All pixel columns (pixel0 to pixel783) from the dataset were used as input features.
 
@@ -88,11 +89,13 @@ tensorflow/Keras (for CNN)
 Solver: lbfgs
 Maximum iterations: 1000
 Target: Flattened label array (np.argmax(y_train, axis=1))
+![logistic regression code](https://github.com/user-attachments/assets/b34cc1fb-b85d-4f54-bb7f-32519add3af4)
 
 #### Support Vector Machine (SVM):
 Kernel: rbf
 Regularization parameter (C): 10
 Target: Flattened label array (np.argmax(y_train, axis=1))
+![SVM code](https://github.com/user-attachments/assets/af47b77e-847b-4860-9058-75b2fec7491d)
 
 #### Convolutional Neural Network (CNN):
 Input shape: (28, 28, 1) (grayscale images reshaped to 28x28x1)
@@ -107,6 +110,7 @@ Optimizer: Adam
 Metrics: accuracy
 Number of epochs: 10 (default, can be tuned)
 Batch size: 32
+![CNN code](https://github.com/user-attachments/assets/18ab3ebc-f897-4461-bdff-7fea36d30d13)
 
 ## 5.Quantitative Analysis
 ### Metrics used to evaluate your final model
@@ -132,16 +136,21 @@ The following are charts related to model training and performance evaluation:
 #### CNN model training and validation accuracy chart
 Description: Shows the training and validation accuracy of the CNN model in each epoch.
 Label: X-axis - Epochs, Y-axis - Accuracy.
+![CNN training and validation accuracy](https://github.com/user-attachments/assets/4647064c-9afc-4bb9-afb7-3a04a533c4a0)
 
 #### CNN model training and validation loss function chart
 Description: Shows the change of loss function between training and validation to ensure model convergence.
 Label: X-axis - Epochs, Y-axis - Loss.
+![CNN training and validation loss](https://github.com/user-attachments/assets/300eaf4b-fa1a-42e3-b17b-83ba164b79a8)
 
 #### Confusion Matrix for Three Models
 Logistic Regression: Shows the classification accuracy of the model on the validation set.
 SVM: Shows the performance of SVM on the validation set.
 CNN: Shows the classification results of the CNN model on the validation set.
 Label: X-axis - Predicted Labels, Y-axis - True Labels.
+![logistic regression confusion matrix](https://github.com/user-attachments/assets/6422db2c-6976-453b-b0a0-3292ed2c661f)
+![SVM confusion matrix](https://github.com/user-attachments/assets/1f570dfe-463d-4498-82da-bd04bab39ce1)
+![CNN confusion matrix](https://github.com/user-attachments/assets/a39a527c-872b-4006-95b5-f6ff00ecc991)
 
 ## 6. Ethical Considerations
 ### Potential negative impacts of using the model
